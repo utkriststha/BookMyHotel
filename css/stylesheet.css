@@ -1,0 +1,2116 @@
+    /* Apples for all pages */
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    body {
+        font-family: 'ABeeZee', sans-serif;
+        background-color: #f8fff7;
+    }
+    
+    span {
+        color: #e63946;
+    }
+    
+    input {
+        border: none;
+        appearance: none;
+        background: #f2f2f2;
+        padding: 12px;
+        border-radius: 20px;
+        height: 90%;
+        outline: none;
+        font-size: 15px;
+        margin: 2px;
+        align-self: center;
+    }
+    
+    select {
+        border: none;
+        appearance: none;
+        background: #f2f2f2;
+        padding: 12px;
+        border-radius: 20px;
+        width: auto;
+        height: 90%;
+        outline: none;
+        font-size: 15px;
+        margin: 2px;
+        align-self: center;
+    }
+    
+    input::placeholder {
+        color: black;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    input:focus::placeholder {
+        color: transparent;
+    }
+    /* ----- */
+    /* All inside nav bar */
+    
+    .navbar {
+        background: #222;
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 20px;
+    }
+    
+    .navbar a {
+        color: aliceblue;
+    }
+    
+    .navbar ul {
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    
+    .navbar li {
+        padding: auto 1em;
+        margin: auto 1rem;
+    }
+    
+    .navbar li:hover {
+        text-decoration: underline;
+    }
+    
+    .navbar .account {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .navbar .logo {
+        font-family: 'Fredoka One', cursive;
+        font-size: 35px;
+    }
+    
+    .navbar .login {
+        border-radius: 20px;
+        border-color: #4bad83c7;
+        background-color: #55ce9a;
+        color: #fdfffc;
+        margin: auto 5px;
+        padding: 10px 20px;
+    }
+    
+    .navbar .signup {
+        border-radius: 20px;
+        border-color: #016b8bce;
+        background-color: #0081a7;
+        color: #fdfffc;
+        margin: auto 5px;
+        padding: 10px 20px;
+    }
+    
+    .login:hover {
+        background-color: #419c75;
+    }
+    
+    .signup:hover {
+        background-color: #006888;
+    }
+    
+    span:hover {
+        color: #d64b28;
+    }
+    
+    .toggleBtn {
+        display: none;
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+    }
+    
+    .toggleBtn .bar {
+        height: 3px;
+        width: 100%;
+        border-radius: 20%;
+        background: white;
+    }
+    
+    @media (max-width: 950px) {
+        .toggleBtn {
+            display: flex;
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .navbar .navlinks {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .navbar ul li {
+            margin: 7px auto;
+        }
+        .navbar .account {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .navbar .account .login {
+            margin: 10px auto;
+        }
+        .navbar .account .signup {
+            margin-top: 10px;
+        }
+        .navlinks.active {
+            display: flex;
+        }
+        .account.active {
+            display: flex;
+        }
+    }
+    /* For Search bar */
+    
+    .searchblock {
+        display: block;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        margin-top: 150px;
+        margin-bottom: 19%;
+    }
+    
+    .searchblock .searchbar {
+        background-color: white;
+        height: 60px;
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+        box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, .3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: auto 3px;
+        box-sizing: border-box;
+    }
+    
+    .searchblock .searchbar input {
+        width: 100%;
+        height: 100%;
+        border-radius: 18px;
+        padding: 17px;
+    }
+    
+    .searchblock .searchbar li {
+        margin: auto 2px;
+    }
+    
+    .checkin {
+        width: 17%;
+    }
+    
+    .checkout {
+        width: 17%;
+    }
+    
+    .guests {
+        width: 10%;
+    }
+    
+    .location {
+        width: 50%;
+    }
+    
+    .searchblock .searchbar button {
+        width: 7%;
+        border: none;
+        appearance: none;
+        background-color: transparent;
+        padding: 20px;
+        margin: 10px auto;
+        margin-right: 10px;
+        position: relative;
+        border-radius: 50%;
+        border-color: #f2f2f2;
+        align-self: center;
+        text-align: center;
+        font-size: 30px;
+        color: #55ce9a;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .searchblock .advSearch {
+        background-color: #e63946;
+        color: white;
+        font-size: 17px;
+        margin: 20px;
+        margin-right: 2px;
+        padding: 8px 25px;
+        border-radius: 20px;
+        align-self: flex-end;
+        float: right;
+        border-width: 0.15px;
+    }
+    
+    .searchblock .advSearch:hover {
+        background-color: #d64b28;
+    }
+    
+    .searchbar button:hover {
+        color: #0081a7;
+        transform: scale(1.1);
+    }
+    
+    .searchblock h2 {
+        font-size: 44px;
+        color: #1d3557;
+    }
+    
+    @media (max-width: 900px) {
+        .checkin {
+            display: none;
+        }
+        .checkout {
+            display: none;
+        }
+        .guests {
+            display: none;
+        }
+        .location {
+            width: 90%;
+        }
+        .searchbar button {
+            width: 10%;
+            margin-right: 30px;
+            padding-right: 20px;
+        }
+    }
+    /* Content section on the page [Catagories|Discount|Explore] */
+    
+    .contentSection {
+        margin: 5px auto;
+        padding: 10px;
+        background-color: #ced3cddc;
+        border-radius: 5px;
+    }
+    
+    .contentSection .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 7px auto;
+    }
+    
+    .contentSection .container .hotel {
+        width: 27%;
+        height: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+        overflow: hidden;
+        position: relative;
+        max-width: 580px;
+    }
+    
+    .contentSection .container .hotel img {
+        height: 70%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .contentSection .container .content {
+        padding: 3px;
+        text-align: center;
+    }
+    
+    .contentSection .container .content .name {
+        color: #213057;
+        font-size: 22px;
+        padding: 2px;
+    }
+    
+    .contentSection .container .content .price {
+        color: rgb(17, 136, 27);
+        font-size: 20px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    .contentSection .container .content .stars i {
+        padding: 4px;
+        margin: 2px;
+        font-size: 17px;
+        color: gold;
+    }
+    
+    .contentSection .more {
+        background: #d64b28;
+    }
+    
+    .contentSection .more:hover {
+        background: none;
+        border: .2rem solid #d64b28;
+        color: #d64b28;
+    }
+    
+    .contentSection .btnBottom {
+        display: none;
+    }
+    
+    .contentSection .container .hotel .view {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+    }
+    
+    .contentSection hr {
+        margin: 3px;
+    }
+    
+    .contentSection button {
+        font-size: 20px;
+        margin: 4px;
+        padding: 3px;
+        height: 40px;
+        width: 90px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: #0098a1;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    
+    .contentSection button:hover {
+        background: none;
+        border: .2rem solid #0098a1;
+        color: #0098a1;
+    }
+    
+    .contentSection .container .hotel .discount {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: block;
+        height: 2.25rem;
+        width: 2.75rem;
+        background: #ff3300;
+        color: #fff;
+        line-height: 2.5rem;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 9%;
+    }
+    
+    .contentSection .heading {
+        margin: 2% auto 3% 3.75%;
+        padding: 5px;
+        font-size: 34px;
+    }
+    
+    .contentSection .headingbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    @media (max-width: 850px) {
+        .contentSection .container {
+            flex-direction: column;
+        }
+        .contentSection .container .hotel {
+            width: 100%;
+            margin: 15px auto;
+        }
+        .contentSection .btnBottom {
+            display: block;
+            margin: 33px;
+        }
+        .contentSection .btnTop {
+            display: none;
+        }
+    }
+    /* For Footer */
+    
+    .footer {
+        background-color: #222;
+        padding: 70px 0 5px 0;
+    }
+    
+    .footer .container {
+        max-width: 1167px;
+        margin: auto;
+    }
+    
+    .footer .container .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .column {
+        width: 25%;
+        padding: 0 15px;
+    }
+    
+    .maincolumn {
+        margin: 10px;
+        padding: 7px;
+    }
+    
+    .maincolumn h4 {
+        font-size: 32px;
+        color: #ffffff;
+        font-family: 'Fredoka One', cursive;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .maincolumn p {
+        font-size: 15px;
+        color: white;
+        margin-bottom: 25px;
+    }
+    
+    .columnblock {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .column {
+        display: block;
+        width: 120%;
+    }
+    
+    .column ul {
+        list-style: none;
+    }
+    
+    .column ul li a {
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 30px;
+        color: #bbbbbb;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 4px;
+    }
+    
+    .column ul li a:hover {
+        color: #ffffff;
+        padding-left: 8px;
+    }
+    
+    .maincolumn .social-links a {
+        display: inline;
+        text-align: center;
+        margin: 24px 5px 2px 0px;
+        padding: 15px 18px;
+        background-color: rgba(255, 255, 255, 0.2);
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    
+    .maincolumn .social-links a:hover {
+        color: #24262b;
+        background-color: #ffffff;
+    }
+    
+    .footer .copyright {
+        text-align: center;
+        padding-top: 40px;
+        color: white;
+        font-size: 12px;
+    }
+    
+    @media (max-width: 700px) {
+        .footer .container .row {
+            flex-direction: column;
+        }
+        .footer .container .row .maincolumn {
+            width: 100%;
+            margin: auto 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer .container .row .columnblock {
+            width: 100%;
+            margin: 20px;
+            padding: 15px;
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .footer .container .row .maincolumn {
+            width: 100%;
+            margin: 15px;
+            padding-left: 30px;
+            display: block;
+        }
+    }
+    /* For Login Page Nav bar */
+    
+    .accountlogin {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .accountlogin .profileimg {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: auto;
+        background-color: rgb(230, 230, 230);
+        border-radius: 19px;
+        margin: 10px;
+        padding: 10px;
+        height: 100%;
+        transition: all 0.2s ease;
+    }
+    
+    .accountlogin .profileimg:hover {
+        color: #24262b;
+        background-color: #ffffff;
+    }
+    
+    .accountlogin img {
+        position: static;
+        border-radius: 50%;
+        border: none;
+        margin-right: 9px;
+        height: 40px;
+        width: 38px;
+    }
+    .accountlogin a {
+    color: black;
+}
+    
+  
+    
+    .accountlogin .logout {
+        display: block;
+        text-align: center;
+        width: 42px;
+        background-color: rgba(255, 255, 255, 0.2);
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+        margin: 5px;
+    }
+    
+    .accountlogin .logout:hover {
+        color: #24262b;
+        background-color: #ffffff;
+    }
+    
+    @media (max-width: 950px) {
+        .toggleBtn {
+            display: flex;
+        }
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .navbar .navlinks {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .navbar ul li {
+            margin: 7px auto;
+        }
+        .navbar .accountlogin {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .navbar .account .profileimg {
+            margin: 5px;
+        }
+        .navbar .account .logout {
+            margin: 10px;
+        }
+        .navlinks.active {
+            display: flex;
+        }
+        .accountlogin.active {
+            display: flex;
+        }
+    }
+    /* 
+For ABOUT US page 
+*/
+    
+    .about {
+        margin: 40px 20px;
+        padding: 10px;
+        display: flex;
+        align-items: top;
+        justify-content: space-around;
+    }
+    
+    .about .content .h {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        font-weight: 90px;
+        font-size: 40px;
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .about .content .contact-form {
+        background-color: #e2e2e2c2;
+        border-radius: 7px;
+        padding: 7px;
+        margin: 10px;
+    }
+    
+    .about .content .entities {
+        background-color: #e2e2e2c2;
+        border-radius: 7px;
+        padding: 7px;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .about .content .entities .entity {
+        display: flex;
+        justify-content: space-around;
+        border-radius: 10px;
+        border-color: #d64b28;
+        border-width: 3px;
+        background-color: #fdfdfdc2;
+        padding: 5px;
+        margin: 8px;
+    }
+    
+    .about .content .entities .entity i {
+        font-size: 35px;
+        color: #e63946;
+        margin: 8px;
+    }
+    
+    .about .content .entities .entity div {
+        margin: 10px;
+        padding: 2px;
+    }
+    
+    .about .content .entities .entity h6 {
+        font-size: 15px;
+    }
+    
+    .about .content .entities .entity p {
+        color: #555555;
+    }
+    
+    .about .team {
+        background-color: #e2e2e2c2;
+        border-radius: 7px;
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .about .team .teamMember img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+    
+    .about .team .teamMember {
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .about .team .teamMember div {
+        margin: 3px;
+        padding: 2px;
+        width: 180px;
+    }
+    
+    .about .team .teamMember div h3 {
+        margin: 3px 0;
+    }
+    
+    .about .team .teamMember div p {
+        color: #727272;
+    }
+    
+    @media (max-width: 900px) {
+        .about {
+            flex-direction: column;
+        }
+        .about .team {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    /* For Contact page */
+    
+    .contact {
+        margin: 40px 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .contact .content {
+        width: 65%;
+        height: 85%;
+    }
+    
+    .contact .content .h {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        font-weight: 90px;
+        font-size: 40px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .contact .content .contact-form {
+        background-color: #e2e2e2c2;
+        border-radius: 7px;
+        padding: 7px;
+        display: block;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .contact .content .contact-form input {
+        width: 98%;
+        margin: 5px 0;
+        border-radius: 12px;
+    }
+    
+    .contact .content .contact-form textarea {
+        color: #24262b;
+        border-radius: 12px;
+        width: 98%;
+        border: none;
+        appearance: none;
+        background: #f2f2f2;
+        padding: 12px;
+        height: 200px;
+        font-size: 14px;
+        margin: 5px 0;
+        resize: none;
+    }
+    
+    .contact .content .contact-form textarea::placeholder {
+        color: black;
+        transition: all 0.2s ease-in-out;
+        font-family: 'ABeeZee', sans-serif;
+    }
+    
+    .contact .content .contact-form textarea:focus::placeholder {
+        color: transparent;
+    }
+    
+    .contact .content .contact-form button {
+        font-size: 20px;
+        margin: 4px;
+        padding: 3px;
+        height: 40px;
+        width: 90px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: #0098a1;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    
+    .contact .content .contact-form button:hover {
+        background: none;
+        border: .2rem solid #0098a1;
+        color: #0098a1;
+    }
+    
+    .contact iframe {
+        border-radius: 5px;
+        margin: 3px;
+        width: 30%;
+    }
+    
+    @media (max-width: 950px) {
+        .contact {
+            flex-direction: column;
+        }
+        .contact .content {
+            width: 90%;
+            height: 85%;
+        }
+        .contact iframe {
+            border-radius: 5px;
+            margin: 3px;
+            width: 90%;
+        }
+    }
+    /* For Privacy and FAQ page */
+    
+    .privacy {
+        margin: 40px 20px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .privacy .content {
+        width: 98%;
+        height: 85%;
+    }
+    
+    .privacy .content .h {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        font-weight: 90px;
+        font-size: 40px;
+        margin: 10px auto;
+        padding: 15px;
+    }
+    
+    .privacy .content .par {
+        background-color: #e2e2e2c2;
+        border-radius: 7px;
+        padding: 7px;
+    }
+    
+    .privacy .content .par h2 {
+        margin: 4px auto;
+    }
+    
+    .privacy .content .par h4 {
+        color: #666666;
+    }
+    
+    .accountContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 85vh;
+    }
+    
+    #accountFormBlock {
+        background-color: white;
+        border-radius: 20px;
+        z-index: 9;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, .3);
+        text-align: center;
+        margin: 50px;
+        padding: 15px;
+        min-width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .accountForm {
+        width: 95%;
+        margin: 20px;
+    }
+    
+    .accountForm input {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    #accountFormBlock .title {
+        font-size: 44px;
+        font-weight: 900;
+        color: #1d3557;
+    }
+    
+    .loginbutton {
+        border-radius: 20px;
+        margin: 27px auto;
+        margin-bottom: 0px;
+        font-size: 22px;
+        padding: 10px 20px;
+        font-family: 'ABeeZee', sans-serif;
+        border-width: 0;
+        border-color: #4bad83c7;
+        background-color: #55ce9a;
+        color: #fdfffc;
+    }
+    
+    .signupbutton {
+        border-radius: 23px;
+        border-color: #4bad83c7;
+        background-color: #55ce9a;
+        color: #fdfffc;
+        margin: 17px auto 0px auto;
+        font-size: 22px;
+        padding: 10px 20px;
+        font-family: 'ABeeZee', sans-serif;
+        border-width: 0px;
+        border-color: #016b8bce;
+        background-color: #0081a7;
+    }
+    
+    .loginbutton:hover {
+        background-color: #419c75;
+    }
+    
+    .signupbutton:hover {
+        background-color: #006888;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .loginlink {
+        color: #0275d8;
+        margin-top: 10px;
+        font-size: 19px;
+    }
+    
+    .loginlink:hover {
+        text-decoration: underline;
+    }
+    
+    .fpassword {
+        color: #d9534f;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    
+    .fpassword:hover {
+        text-decoration: underline;
+    }
+    
+    .signuplink:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    /*for profile navigation side bar */
+    
+    .profileContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .profileNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5px;
+        background-color: #222;
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+        box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, .3);
+        box-sizing: border-box;
+        width: 30%;
+        max-width: 325px;
+        height: 500px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10px;
+    }
+    
+    .profileNav .tabs {
+        background-color: rgb(192, 190, 190);
+        margin: 30px 17px;
+        padding: 22px;
+        border-radius: 10px;
+        font-size: 25px;
+        transition: all 0.5s ease;
+    }
+    
+    .profileNav .tabs:hover {
+        background-color: white;
+    }
+    
+    .profileNav .tabs a {
+        color: black;
+    }
+    
+    .profileContainer .profileNav .tabs.current {
+        background-color: white;
+    }
+    
+    .profileContainer .profileContent {
+        width: 90%;
+    }
+    
+    .profileContainer .profileContent .information {
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profileContainer .profileContent .headding {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        margin: 10px auto;
+        padding: 15px;
+        margin: 5px;
+        padding: 17px;
+    }
+    
+    .profileContainer .profileContent .headding h2 {
+        font-size: 45px;
+        font-weight: 30px;
+        margin: 8px 3px;
+    }
+    
+    .profileContainer .profileContent .headding h4 {
+        color: rgba(255, 255, 255, 0.534);
+        font-size: 22px;
+        font-weight: 9px;
+        margin: 5px 3px;
+    }
+    
+    .profileContainer .profileContent .headding img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 5px;
+    }
+    
+    .profileContainer .profileContent .information ul li {
+        margin: 7px;
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .profileContainer .profileContent .information ul li div {
+        margin: 7px 25px;
+        padding: 3px;
+    }
+    
+    .profileContainer .profileContent .information ul li label {
+        font-size: 23px;
+        font-weight: 10px;
+    }
+    
+    .profileContainer .profileContent .information ul li input {
+        width: 230px;
+        background-color: rgb(214, 214, 214);
+    }
+    
+    .profileContainer .profileContent .information ul li select {
+        background-color: rgb(214, 214, 214);
+    }
+    
+    .profileContainer .profileContent .information .buttons {
+        display: flex;
+        justify-content: space-around;
+        margin: 15px auto;
+        padding: 5px;
+    }
+    
+    .profileContainer .profileContent .information button {
+        border-radius: 20px;
+        border: 1px;
+        color: white;
+        margin: auto 5px;
+        padding: 10px 22px;
+        font-size: 20px;
+    }
+    
+    .profileContainer .profileContent .information .danger {
+        background-color: red;
+    }
+    
+    .profileContainer .profileContent .information .save {
+        background-color: green;
+    }
+    
+    .profileContainer .profileContent .information .danger:hover {
+        background-color: rgb(168, 1, 1);
+    }
+    
+    .profileContainer .profileContent .information .save:hover {
+        background-color: rgb(1, 70, 1);
+    }
+    
+    .profileContainer .profileContent .information .primary {
+        background-color: rgb(0, 81, 255);
+    }
+    
+    .profileContainer .profileContent .information .append {
+        background-color: #ff5e00
+    }
+    
+    .profileContainer .profileContent .information .primary:hover {
+        background-color: rgb(2, 63, 194);
+    }
+    
+    .profileContainer .profileContent .information .append:hover {
+        background-color: #ca4a00
+    }
+    
+    .profileContainer .profileContent .information li div h3 {
+        border-radius: 5px;
+        background-color: #222;
+        color: white;
+        font-size: 30px;
+        padding: 7px 40px;
+    }
+    
+    #guestNum {
+        width: 60px;
+    }
+    /* for after search page  */
+    
+    .resultContainer {
+        display: flex;
+    }
+    
+    .resultNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5px;
+        background-color: #222;
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+        box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, .3);
+        box-sizing: border-box;
+        width: 30%;
+        min-width: 300px;
+        max-width: 325px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10px;
+        max-height: 390px;
+    }
+    
+    .resultContainer .resultNav h1 {
+        color: white;
+        font-weight: 200px;
+        margin: 18px;
+        margin-bottom: 2px;
+    }
+    
+    .resultContainer .resultNav form {
+        width: 100%;
+    }
+    
+    .resultContainer .resultNav .searchbar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        padding: 6px;
+        width: 100%;
+        max-height: 300px;
+    }
+    
+    .resultContainer .resultNav .searchbar li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .resultContainer .resultNav .searchbar li input {
+        width: 90%;
+        margin: 8px;
+    }
+    
+    .resultContainer .resultNav .searchbar li #guests {
+        width: 30%
+    }
+    
+    .resultContainer .resultNav button {
+        border-radius: 20px;
+        border: 1px;
+        color: white;
+        margin: auto 5px;
+        padding: 10px 22px;
+        font-size: 20px;
+    }
+    
+    .resultContainer .resultNav .searchbtn {
+        background-color: green;
+    }
+    
+    .resultContainer .resultNav .searchbtn:hover {
+        background-color: rgb(1, 70, 1);
+        transform: none;
+    }
+    
+    .resultContainer .resultNav .advSearch {
+        background-color: #e63946;
+        color: white;
+        font-size: 17px;
+        margin: 20px;
+        margin-right: 2px;
+        padding: 8px 25px;
+        border-radius: 20px;
+        border-width: 0.15px;
+    }
+    
+    .resultContainer .resultNav .advSearch:hover {
+        background-color: #d64b28;
+    }
+    
+    .resultContainer .profileContent {
+        width: 80%;
+    }
+    
+    .resultContainer .resultContent {
+        width: 80%;
+        min-height: 90vh;
+    }
+    
+    .resultContainer .resultContent .headding {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        margin: 10px auto;
+        padding: 15px;
+        margin: 5px;
+        padding: 17px;
+    }
+    
+    .resultContainer .resultContent .headding h2 {
+        font-size: 40px;
+        font-weight: 30px;
+        margin: 2px 3px;
+    }
+    
+    .resultContainer .resultContent .headding h4 {
+        color: rgba(255, 255, 255, 0.534);
+        font-size: 22px;
+        font-weight: 9px;
+        margin: 2px 3px;
+    }
+    
+    .resultContainer .resultContent .resultHotels {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        padding: 7px;
+        background-color: #ced3cddc;
+        border-radius: 5px;
+    }
+
+    .resultContainer .resultContent .resultHotels.disableDiv {
+        display: none;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel img {
+        width: 25%;
+        border-radius: 5px;
+        margin: 3px;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sideImg {
+        display: none;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details {
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details .name {
+        display: flex;
+        margin: 4px auto;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details .subDetail {
+        margin: 5px auto;
+        color: #0275d8;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details .subDetail h4 span {
+        margin: 5px;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details p {
+        margin: 5px auto;
+        color: #606061;
+        font-size: 15px;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details .name h2 {
+        font-size: 35px;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .details .name .stars {
+        padding: 4px;
+        margin: 3px 10px;
+        font-size: 17px;
+        color: gold;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sidebar iframe {
+        width: 120px;
+        height: 150px;
+        border-radius: 5px;
+        border: 0px;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sidebar button {
+        font-size: 20px;
+        margin: 4px;
+        padding: 3px;
+        height: 40px;
+        width: 90px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: #0098a1;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sidebar button:hover {
+        background: none;
+        border: .2rem solid #0098a1;
+        color: #0098a1;
+    }
+    
+    .searchblock.afterSearchBlock {
+        display: none;
+    }
+    
+    .searchblock.afterSearchBlock .advSearchbtn {
+        color: white;
+        background-color: #e63946;
+        height: 10px;
+        width: 10px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .searchblock.afterSearchBlock .searchbtn {
+        margin: 0px;
+    }
+    
+    .searchblock.afterSearchBlock .advSearchbtn:hover {
+        background-color: #d64b28;
+        transform: none;
+    }
+    
+    .resultContainer .resultContent .resultHotels .hotel .sidebar .mapbtn {
+        display: none;
+    }
+    
+    @media (max-width: 1100px) {
+        .searchblock.afterSearchBlock {
+            display: flex;
+            width: 95%;
+            margin: 20px;
+            justify-content: center;
+        }
+        .searchblock.afterSearchBlock {
+            align-self: flex-start;
+        }
+        .resultNav {
+            display: none;
+        }
+        .resultContainer {
+            width: 100%;
+        }
+        .resultContainer .resultContent {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .searchblock.afterSearchBlock .location {
+            width: 80%;
+        }
+        .searchblock.afterSearchBlock .searchbar button {
+            margin-right: 20px;
+            padding-right: 20px;
+        }
+        .searchblock.afterSearchBlock form {
+            width: 97%;
+        }
+    }
+    
+    @media (max-width: 750px) {
+        .resultContainer .resultContent .resultHotels .hotel .mainImg {
+            display: none;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar .sideImg {
+            display: flex;
+            width: 100%;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar div {
+            display: flex;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar div iframe {
+            display: none;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar div .mapbtn {
+            display: flex;
+            width: 120px;
+            align-items: center;
+            justify-content: center;
+            background: #d64b28;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar div .mapbtn:hover {
+            background: none;
+            border: .2rem solid #d64b28;
+            color: #d64b28;
+        }
+    }
+    
+    @media (max-width: 660px) {
+        .resultContainer .resultContent .resultHotels .hotel .details .name {
+            flex-direction: column;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .details .name .stars {
+            margin: 0;
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .resultContainer .resultContent .resultHotels .hotel .details .name {
+            flex-direction: row;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .details .name .stars {
+            margin: 3px 10px;
+        }
+        .resultContainer .resultContent .resultHotels .hotel {
+            flex-direction: column;
+        }
+        .resultContainer .resultContent .resultHotels .hotel .sidebar .sideImg {
+            width: 90%;
+        }
+    }
+    
+    .profileContainer .profileNav.admin {
+        width: 17%;
+        min-width: 200px;
+        max-width: 250px;
+        height: 600px;
+    }
+    
+    .profileContainer .profileContent.admin {
+        width: 90%;
+    }
+    
+    .profileContainer .profileContent.admin .personalDetails .headding {
+        padding: 5px;
+    }
+    
+    .profileContainer .profileContent.admin .information .tabs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .profileContainer .profileContent.admin .information .report {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .report .reportTable {
+        border-radius: 15px;
+        overflow: hidden;
+        width: 98%;
+    }
+    
+    .report .reportTable thead tr {
+        background-color: #ca4a00;
+        color: white;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 30px;
+    }
+    
+    .report .reportTable th,
+    .report .reportTable td {
+        padding: 25px 15px;
+    }
+    
+    .report .reportTable tbody tr:nth-of-type(2n) {
+        background-color: rgb(230, 230, 230);
+    }
+    
+    .report .reportTable tbody tr:last-of-type {
+        border-bottom: 3px solid #419c75;
+    }
+    
+    .report .reportTable tbody tr td:last-child {
+        text-align: center;
+    }
+    
+    .report .reportTable tbody tr td input {
+        width: 80px;
+        background-color: #e7e4e4;
+        text-align: center;
+    }
+    
+    .report .reportTable tbody tr:nth-of-type(2n) td input {
+        background-color: white;
+    }
+    
+    
+    .profileContainer .profileContent.admin .information .report h2 {
+        background-color: #bdbdbd;
+        font-size: 28px;
+        align-self: flex-start;
+        margin: 10px;
+        padding: 12px 10px;
+        width: 99%;
+        border-radius: 10px;
+        color: black;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 240px;
+        height: 80px;
+        padding: 15px;
+        margin: 18px;
+        background-color: #fefeff;
+        border-radius: 10px;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab h3 {
+        color: black;
+        font-size: 28px;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab h4 {
+        color: rgb(56, 56, 56);
+        font-size: 25px;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab i {
+        font-size: 45px;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(1) i {
+        color: #ff5e00;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(2) i {
+        color: #0098a1;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(3) i {
+        color: #0275d8;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(4) i {
+        color: rgb(23, 107, 23);
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(5) i {
+        color: #ffd60a;
+    }
+    
+    .profileContainer .profileContent.admin .information .tab:nth-child(6) i {
+        color: #d62828;
+    }
+    
+    .profileContainer .profileContent.admin .information .chart {
+        width: 95%;
+        height: 600px;
+    }
+    
+    .searchblock.admin {
+        text-align: left;
+        margin: 10px;
+        width: 90%;
+    }
+    
+    .searchblock.admin div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .searchblock.admin div form {
+        width: 90%;
+    }
+    
+    .searchblock.admin div form .searchbar.admin li {
+        width: 100%;
+    }
+    
+    .searchblock.admin div form .searchbar.admin li input {
+        width: 100%;
+        background: #f2f2f2;
+    }
+    
+    .searchblock.admin div form .searchbar.admin .searchbtn {
+        color: #55ce9a;
+        font-size: 30px;
+        padding: 10px;
+        margin-right: 8px;
+    }
+    
+    .searchblock.admin div .changebtn {
+        background-color: #ca4a00;
+    }
+    /* hotel page */
+    
+    .hotelTitle {
+        margin: 3px;
+        padding: 2px;
+    }
+    
+    .hotelTitle h1 {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        font-weight: 90px;
+        font-size: 40px;
+        margin: 5px auto;
+        padding: 15px;
+    }
+    /* Slideshow container */
+    
+    .hotelTitle .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+    /* Hide the images by default */
+    
+    .hotelTitle .slideshow-container .mySlides {
+        display: none;
+    }
+    /* Next & previous buttons */
+    
+    .hotelTitle .slideshow-container .prev,
+    .hotelTitle .slideshow-container .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    
+    .hotelTitle .slideshow-container .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    
+    .hotelTitle .slideshow-container .prev:hover,
+    .hotelTitle .slideshow-container .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Caption text */
+    
+    .hotelTitle .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* Number text (1/3 etc) */
+    
+    .hotelTitle .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    /* The dots/bullets/indicators */
+    
+    .hotelTitle .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .hotelTitle .active,
+    .hotelTitle .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .hotelTitle .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .7
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .7
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    .hotelDetails {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hotelDetails .description {
+        display: flex;
+        justify-content: space-between;
+        background-color: #ced3cddc;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .hotelDetails h1 {
+        background-color: #5e5e5e;
+        margin: 3px;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    .hotelDetails .description h2 {
+        border-radius: 10px;
+        padding: 8px;
+        margin: 3px auto;
+        background-color: #0098a1;
+        color: white;
+    }
+    
+    .hotelDetails .description li {
+        padding-left: 8px;
+    }
+    
+    .hotelDetails .description iframe {
+        width: 100%;
+        height: 80%;
+        border: 10px;
+        border-radius: 5px;
+    }
+    
+    .hotelDetails .description .column .subHeading .stars {
+        text-align: left;
+        margin: auto 5px;
+        padding: 3px;
+    }
+    
+    .hotelDetails .description .column .subHeading .stars i {
+        padding: 4px;
+        margin: 2px;
+        font-size: 23px;
+        color: gold;
+    }
+    
+    .hotelDetails .description .column .subHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hotelDetails .description .column .subHeading h4 {
+        font-size: 18px;
+        margin: auto 15px;
+    }
+    
+    .hotelDetails .description .column .subHeading .readMorebtn {
+        font-size: 20px;
+        margin: 4px;
+        padding: 3px;
+        height: 40px;
+        width: 150px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: #d64b28;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    
+    .hotelDetails .description .column .subHeading .readMorebtn:hover {
+        background: none;
+        border: .2rem solid #d64b28;
+        color: #d64b28;
+    }
+    
+    .hotelDetails .description .column .container {
+        border: 2px solid #ccc;
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 16px;
+        margin: 16px 0;
+    }
+    /* Clear floats after containers */
+    
+    .hotelDetails .description .column .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+    
+    .hotelDetails .description .column .container img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+    
+    @media (max-width: 500px) {
+        .hotelDetails .description .column .container {
+            text-align: center;
+        }
+        .hotelDetails .description .column .container img {
+            margin: auto;
+            float: none;
+            display: block;
+        }
+    }
+    
+    .hotelDetails .bookRoom {
+        display: flex;
+        flex-direction: column;
+    }
+    .hotelDetails .bookRoom .alert {
+        background-color: rgb(247, 82, 82);
+        color: white;
+        text-align: center;
+        padding: 9px;
+        margin: 2px;
+    }
+    .hotelDetails .roomTable {
+        width: 100%;
+        margin: 3px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    
+    .hotelDetails .roomTable thead tr {
+        background-color: #419c75;
+        color: white;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 30px;
+    }
+    
+    .hotelDetails .roomTable th,
+    .hotelDetails .roomTable td {
+        padding: 25px 15px;
+    }
+    
+    .hotelDetails .roomTable tbody tr:nth-of-type(2n) {
+        background-color: rgb(230, 230, 230);
+    }
+    
+    .hotelDetails .roomTable tbody tr:last-of-type {
+        border-bottom: 3px solid #419c75;
+    }
+    
+    .hotelDetails .roomTable tbody tr td:last-child {
+        text-align: center;
+    }
+    
+    .hotelDetails .roomTable tbody tr td input {
+        width: 80px;
+        background-color: #e7e4e4;
+        text-align: center;
+    }
+    
+    .hotelDetails .roomTable tbody tr:nth-of-type(2n) td input {
+        background-color: white;
+    }
+    
+    .hotelDetails .bookRoom .reservebtn {
+        font-size: 20px;
+        margin: 4px;
+        padding: 3px;
+        height: 50px;
+        width: 160px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        background: #d62828;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    
+    .hotelDetails .bookRoom .reservebtn:hover {
+        background: none;
+        border: .2rem solid #d62828;
+        color: #d62828;
+    }
+    
+    .hotelDetails .bookRoom .reserveBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .searchblock.afterSearchBlock.selective {
+        display: flex;
+        width: 100%;
+        margin: 20px;
+    }
+    
+    .searchblock.afterSearchBlock.selective form {
+        width: 95%;
+        padding: 5px;
+    }
+    
+    .contentSection.headding {
+        color: white;
+        background-color: #000000c2;
+        border-radius: 7px;
+        margin: 2px auto;
+        padding: 20px;
+        margin: 5px;
+        padding: 17px;
+    }
+    
+    .contentSection .pageNav {
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .contentSection .pageNav .countbtn {
+        width: 45px;
+        background-color: #e63946;
+    }
+    
+    .contentSection .pageNav .navbtn {
+        background-color: #ca4a00;
+        width: 140px;
+    }
+    
+    .contentSection .pageNav .countbtn:hover {
+        background: none;
+        border: .2rem solid #e63946;
+        color: #e63946;
+    }
+    
+    .contentSection .pageNav .navbtn:hover {
+        background: none;
+        border: .2rem solid #d62828;
+        color: #d62828;
+    }
+
+/* Payment div */
+.completePayment{
+    height: 75vh;
+    text-align: center; 
+
+}
+.completePayment h2{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+.completePayment p{
+    padding-top: 30px;
+    text-align: center;
+}
